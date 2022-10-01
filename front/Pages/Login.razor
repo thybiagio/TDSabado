@@ -1,23 +1,41 @@
-@page "/login" 
+@page "/login"
+@using Services
 
+<div class="registercontainer"> 
 <p>
-    <label>Nome</label> 
-    <input type="text"/>
+    <label for="">Nome Completo:</label>
+    <input type="text" @bind-value="@nome"/>
+</p>
+<br>
+<p>
+    <label>Senha</label>
+    <input type="Password"@bind-value="@senha"/>
 </p>
 
-<p> 
-    <label>Senha</label> 
-    <input type="password"/>
-</p> 
+<p>
+    <label for="">Data de Nascimento</label>
+    <input type="date"@bind-value="@birth"/>
 
-<p> 
-    <label>Data de Nascimento</label>
-    <input type="date"/>
-</p> 
+</p>
 
-<p> 
-    <label>Nome de Usuario</label> 
-    <input type="text"/>
-</p> 
+<p>
+    <label for="">Nome de usuário</label>
+    <input type="text"@bind-value="@userId"/>
+</p>
 
-<button>Criar Conta</button>
+<button onclick="@CreateAccount">criar conta</button>
+
+@code{
+    private string nome; 
+    private string senha; 
+    private DateTime birth;
+    private string userId;
+    public async void CreateAccount()
+    {
+            UserService service = new UserService( 
+                ""
+            );
+           await service.Register(this.nome, this.userId, this.birth, this.senha);
+    }
+}
+</div>

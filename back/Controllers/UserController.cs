@@ -16,6 +16,7 @@ public class UserController : ControllerBase
     [HttpPost("register")]
     public IActionResult Register([FromBody] UsuarioDTO user) 
     {
+        
         using TDSabadoContext context = new TDSabadoContext(); 
         Usuario usuario = new Usuario(); 
         usuario.Name = user.Name; 

@@ -25,3 +25,4 @@ C:\Users\Aluno\Documents\GitHub\TDSabado\front\obj\Debug\net6.0\front.pdb
 C:\Users\Aluno\Documents\GitHub\TDSabado\front\obj\Debug\net6.0\front.genruntimeconfig.cache
 C:\Users\Aluno\Documents\GitHub\TDSabado\front\obj\Debug\net6.0\front.RazorAssemblyInfo.cache
 C:\Users\Aluno\Documents\GitHub\TDSabado\front\obj\Debug\net6.0\front.RazorAssemblyInfo.cs
+C:\Users\Aluno\Documents\GitHub\TDSabado\front\obj\Debug\net6.0\scopedcss\Pages\Login.razor.rz.scp.css
