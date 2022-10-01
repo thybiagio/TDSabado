@@ -1,4 +1,4 @@
-namespace Back;
+namespace TDSabado.Data;
 
 public class WeatherForecast
 {
