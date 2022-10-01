@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "dto/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/dto.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/dto.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "dto/1.0.0": {
+      "type": "project",
+      "path": "../dto/dto.csproj",
+      "msbuildProject": "../dto/dto.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "dto >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Aluno\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Aluno\\Documents\\GitHub\\TDSabado\\dto\\dto.csproj": {
+              "projectPath": "C:\\Users\\Aluno\\Documents\\GitHub\\TDSabado\\dto\\dto.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -68,7 +91,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

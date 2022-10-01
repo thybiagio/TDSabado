@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "front/1.0.0": {
+        "dependencies": {
+          "dto": "1.0.0"
+        },
         "runtime": {
           "front.dll": {}
+        }
+      },
+      "dto/1.0.0": {
+        "runtime": {
+          "dto.dll": {}
         }
       }
     }
   },
   "libraries": {
     "front/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "dto/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,41 +1,77 @@
 @page "/login"
-@using Services
 
-<div class="registercontainer"> 
-<p>
-    <label for="">Nome Completo:</label>
-    <input type="text" @bind-value="@nome"/>
-</p>
-<br>
-<p>
-    <label>Senha</label>
-    <input type="Password"@bind-value="@senha"/>
-</p>
+@using Services;
 
-<p>
-    <label for="">Data de Nascimento</label>
-    <input type="date"@bind-value="@birth"/>
+@inject UserService service
 
-</p>
+<div class="logregcontainer">
+    <div class="registercontainer">
+        <p>
+            <label>Nome Completo</label>
+            <input type="text" @bind-value="@name"/>
+        </p>
 
-<p>
-    <label for="">Nome de usuário</label>
-    <input type="text"@bind-value="@userId"/>
-</p>
+        <p>
+            <label>Senha</label>
+            <input type="password" @bind-value="@password"/>
+        </p>
 
-<button onclick="@CreateAccount">criar conta</button>
+        <p>
+            <label>Repetir Senha</label>
+            <input type="password" @bind-value="@repeatpassword"/>
+        </p>
 
-@code{
-    private string nome; 
-    private string senha; 
+        <p>
+            <label>Data de Nascimento</label>
+            <input type="date" @bind-value="@birth"/>
+        </p>
+
+        <p>
+            <label>Nome de Usuario</label>
+            <input type="text" @bind-value="@userId"/>
+        </p>
+
+        <button onclick="@CreateAccount">
+            Criar Conta
+        </button>
+    </div>
+    <div>
+        <p>
+            <label>Nome de Usuario</label>
+            <input type="text" @bind-value="@userId"/>
+        </p>
+
+        <p>
+            <label>Senha</label>
+            <input type="password" @bind-value="@password"/>
+        </p>
+
+        <button onclick="@UserLogin">
+            Logar
+        </button>
+    </div>
+</div>
+
+
+@code 
+{
+    private string name;
+    private string password;
+    private string repeatpassword;
     private DateTime birth;
     private string userId;
+
     public async void CreateAccount()
     {
-            UserService service = new UserService( 
-                ""
-            );
-           await service.Register(this.nome, this.userId, this.birth, this.senha);
+        await service.Register(
+            this.name, 
+            this.userId,
+            this.birth, 
+            this.password);
+    }
+
+    public async void UserLogin()
+    {
+
     }
 }
-</div>

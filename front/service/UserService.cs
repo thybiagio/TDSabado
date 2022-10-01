@@ -11,7 +11,7 @@ public class UserService
     public UserService(string server) 
     { 
             client = new HttpClient(); 
-            client.BaseAddress = new Uri(server + "/user");
+            client.BaseAddress = new Uri(server);
     }
     public async Task Register( 
         string name, 
@@ -26,7 +26,7 @@ public class UserService
         user.BirthDate = birth;
 
         var result = await client 
-            .PostAsJsonAsync("/register", user);
+            .PostAsJsonAsync("user/register", user);
 
     }
 }

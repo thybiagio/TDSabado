@@ -1,34 +1,61 @@
 /* _content/front/Pages/Login.razor.rz.scp.css */
 .registercontainer[b-xqazf780xr]{ 
-    padding: 10px;
+    padding: 10px; 
+    background-color: cadetblue; 
+    border: 5px; 
+    border-color: black; 
+    border-radius: 5px;
+} 
+
+.logincontainer[b-xqazf780xr]{ 
+    padding: 10px; 
+    background-color: cadetblue; 
+    border: 5px; 
+    border-color: black; 
+    border-radius: 5px;
+
+}
+
+.logregcontainer[b-xqazf780xr]{ 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-around; 
+    align-items: center;
+    
 }
 /* _content/front/Shared/MainLayout.razor.rz.scp.css */
-
-main[b-yu7g06b3ii] {
-    flex: 1;
+.navigation[b-yu7g06b3ii] {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
 }
 
-header[b-yu7g06b3ii]{
-    background-color: blueviolet;
+.navigation a[b-yu7g06b3ii] {
+    text-decoration: none;
+    display: block;
     color: white;
-
+    padding: 1em;
 }
 
-.headercontainer[b-yu7g06b3ii]{
+.navigation a:hover[b-yu7g06b3ii] {
+    background-color: blueviolet;
+}
+
+header[b-yu7g06b3ii] {
+    background-color:deepskyblue;
+    color: white;
+}
+
+.headercontainer[b-yu7g06b3ii] {
+    padding-left: 2vw;
+    padding-right: 5vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 1vh;
-    padding-right: 5vh;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
     align-items: center;
-}
-
-.headercontainer a[b-yu7g06b3ii]{
-    color: white;
-    font-size: 2em;
-    text-decoration: none;
 }
 /* _content/front/Shared/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-u6fkk8rcl2] {
